@@ -7,6 +7,7 @@
 }
 
 /* shared styles */
+
 .display-flex{
     display: flex;
 }
@@ -35,6 +36,13 @@
 .banner-content, main, footer {
     width: 80%;
     margin: 50px auto;
+}
+main > section{
+    margin: 50px auto;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 /* header style */
 header{
@@ -119,19 +127,56 @@ header{
     color: #727272;
 
 }
-.features-title{
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-.features-title .h3-1{
+
+.section-title .h3-1{
     color: #727272;
 }
-.features-title .h3-2{
+.section-title .h3-2{
     color:  #131313;
 }
-.features-title .h3-3{
+.section-title .h3-3{
     color:  #FF900E;
 }
+
+/* some facts related styles */
+.some-title-container{
+    width: 40%;
+}
+.facts-container{
+    border: 2px solid blue;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    
+}
+.fact-card{
+    border: 2px solid #FF900E;
+    width: 240px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.fact-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+
+
 
 /* responsive media query */
 
@@ -173,18 +218,50 @@ header{
     .our-features p {
         margin: 20px 0;
     }
+    /* some facts-container */
+    .some-title-container{
+        width: 100%;
+    }
+    .some-title-container p{
+        margin: 10px 0;
+    }
+    .facts-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .fact-card{
+        margin: 20px auto;
+    }
 }
 
 /* medium size device */
 @media only screen and (min-width: 577px) and (max-width: 992px){
+    .brand{
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
     .teams {
         flex-direction: column;
     }
     .our-features {
-        margin: 40px 0;
+        margin: 20px 0;
         width: 100%;
     }
     .our-features p{
         margin: 25px 0;
+    }
+    .some-title-container {
+        width: 100%;
+    }
+
+    .some-title-container p {
+        margin: 10px 0;
+    }
+
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fact-card {
+        margin: 20px auto;
     }
 }
